@@ -15,7 +15,7 @@ public abstract class NoteDatabase extends RoomDatabase {
     public abstract NoteDAO noteDAO();
 
     public static synchronized NoteDatabase getInstance(Context context){
-        if (instance == null){
+        if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),NoteDatabase.class,
                     "note_database")
                     .fallbackToDestructiveMigration()
